@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
             exit(21);
         }
 gotolabel:
-        printf("\nEnter 1. 90 Degrees clockwise, \n2. 180 Degrees, \n3. 270 Degrees clockwise\n4. Leave it.\nIn the next line enter a caption for the image : ");
+        printf("\nEnter  your choice, then in the next line enter caption. \n 1. 90 Degrees clockwise, \n2. 180 Degrees, \n3. 270 Degrees clockwise\n4. Leave it.\n Enter your choice, then the caption in the next line. : ");
         scanf("%d %200[0-9a-zA-Z ]",&choice,caption);
         switch(choice)
         {

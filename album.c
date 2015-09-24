@@ -10,11 +10,8 @@
 #include "conversions.c"
 int main(int argc, char *argv[])
 {
-    int i,r,r1,f;
+    int i,r;
     int choice;
-    char *t;
-    int status;
-    char command[100];
     char caption[200];
     char angle[20];
     /*

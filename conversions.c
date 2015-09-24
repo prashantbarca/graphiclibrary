@@ -22,9 +22,8 @@ void display(int i)
  */
 void rotate(int x,char *angle)
 {
-    int i,r,r1;
+    int r,r1;
     char newfile[100];
-    char currentfile[100];
     int status;
     r = fork();
     if(r==0)
@@ -49,7 +48,7 @@ void rotate(int x,char *angle)
  */
 void convert(char *filename,char *flag,int x)
 {
-    int i,r;
+    int r;
     char newfile[100];
     int status;
     r = fork();
@@ -58,13 +57,13 @@ void convert(char *filename,char *flag,int x)
         if(strcmp(flag,"medium")==0)
         {
             sprintf(newfile,"medium%d.jpg",x);
-            execl("/usr/bin/convert","convert",filename,"-resize","25%",newfile,NULL);
+            execl("/usr/bin/convert","convert",filename,"-geometry","25%",newfile,NULL);
             exit(21);
         }
         else if(strcmp(flag,"thumbnail")==0)
         {
             sprintf(newfile,"thumbnail%d.jpg",x);
-            execl("/usr/bin/convert","convert",filename,"-resize","10%",newfile,NULL);
+            execl("/usr/bin/convert","convert",filename,"-geometry","10%",newfile,NULL);
             exit(21);
         }
     }

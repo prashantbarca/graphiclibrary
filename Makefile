@@ -3,10 +3,13 @@
 # prashant, 2015-09-23 09:24
 #
 
+CC= gcc
+TARGET= album
+CFLAGS= -g -w -ggdb -O0 -Wunreachable-code
 build : conversions.c fileoperations.c album.c
-	gcc -o album -g album.c -Wall -Wextra -ggdb -O0 -Wunreachable-code
+	$(CC) -o $(TARGET) $(TARGET).c $(CFLAGS)
 clean: 
-	rm album
+	rm $(TARGET)
 	rm index.html
 	rm thumb*
 	rm medium*
